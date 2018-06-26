@@ -5,9 +5,11 @@ const updateHeading = function(ev) {
   const f = ev.target
 
   const flickName = f.flickName.value
-
   const list = document.querySelector('#flicks')
-  list.innerHTML += `<li>${flickName}</li>`
+  item.textContent=flickName
+
+  const item= document.createElement("li")
+  list.appendChild(Item)
 
   f.reset()
 }
