@@ -1,28 +1,26 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Chrismess - A whole mess o' Chrisses</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Chrismess - A whole mess o' Chrisses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
   <h1>Chrismess</h1>
-  <h2 class ="oldestText">
-    This is the heading we are going to change
-  </h2>
-  <h2>Another Heading</h2>
-  <h1 class="oldText">
-    This is the old text
-  </h1>
-  <button> Click Me To Change Text</button>
-  <form> 
-    <input type="text" id="inputText"> 
-    <input type="submit" name="Submit" id="submitButton">
+
+  <form id="flickForm">
+    <input
+      type="text"
+      name="flickName"
+      placeholder="Enter a flick"
+      autofocus
+    >
+    <button type="submit">Add Flick</button>
   </form>
-  <script src="index.js"></script>   
-    
+
+  <ul id="flicks"></ul>
+
+  <script src="index.js"></script>
 </body>
 </html>

@@ -1,16 +1,15 @@
+const form = document.querySelector('form#flickForm')
 
-const button = document.querySelector('button')
-const button2=document.querySelector('#submitButton')
-const enter=keyCode=13
-const updateText=function(){
-    const p =document.querySelector('.oldestText')
-    p.textContent = 'This is the updated, newer text.'
+const updateHeading = function(ev) {
+  ev.preventDefault()
+  const f = ev.target
+
+  const flickName = f.flickName.value
+
+  const list = document.querySelector('#flicks')
+  list.innerHTML += `<li>${flickName}</li>`
+
+  f.reset()
 }
-const updateInput=function(){
-    const g=document.querySelector('h1')
-    g.textContent=document.querySelector("#inputText").value
-    event.preventDefault()
-}
-button.addEventListener('click',updateText)
-button2.addEventListener('click',updateInput)
-enter.addEventListener('keyup')
+
+form.addEventListener('submit', updateHeading)
